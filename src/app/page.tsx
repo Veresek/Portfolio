@@ -1,3 +1,8 @@
+import Profile from '@/components/profile'
 export default function Home() {
-	return <h1 className='text-background'>Essa</h1>;
+   return (
+      <div>
+         <Profile />
+      </div>
+   )
 }
