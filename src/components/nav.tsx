@@ -20,16 +20,16 @@ export default function Nav() {
             <div>
                <ul>
                   <li>
-                     <Link href="#">About Me</Link>
+                     <Link href="/">About Me</Link>
                   </li>
                   <li>
-                     <Link href="#">My Projects</Link>
+                     <Link href="/projects">My Projects</Link>
                   </li>
                   <li>
-                     <Link href="#">My Experience</Link>
+                     <Link href="/experience">My Experience</Link>
                   </li>
                   <li>
-                     <Link href="#">Contact</Link>
+                     <Link href="/contact">Contact</Link>
                   </li>
                </ul>
             </div>
