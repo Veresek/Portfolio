@@ -1,13 +1,14 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import menu from '@assets/menu.svg'
 import { useState } from 'react'
 export default function Nav() {
    const [openNav, setOpenNav] = useState<boolean>(false)
    return (
       <nav>
          <Image
-            src={`/menu.svg`}
+            src={menu}
             width={40}
             height={40}
             alt="menu icon"

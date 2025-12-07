@@ -1,7 +1,0 @@
-Zawartość strony:
-1. Imie i nazwisko
-2. Mój krótki opis (4-5 zdań)
-3. Tech Stack
-4. Czym się zajmuję
-5. Moje projekty
-6. Kontakt

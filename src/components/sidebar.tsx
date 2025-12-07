@@ -1,4 +1,8 @@
 import Image from 'next/image'
+import mapPin from '@assets/mapPin.svg'
+import github from '@assets/socials/github.svg'
+import linkedin from '@assets/socials/linkedin.svg'
+import twitch from '@assets/socials/twitch.svg'
 export default function Sidebar() {
    return (
       <aside>
@@ -14,7 +18,7 @@ export default function Sidebar() {
          <ul>
             <li>
                <div>
-                  <Image src={`/mapPin.svg`} width={40} height={40} alt="Map icon" />
+                  <Image src={mapPin} width={40} height={40} alt="Map icon" />
                </div>
                <div>
                   <p>location</p>
@@ -23,7 +27,7 @@ export default function Sidebar() {
             </li>
             <li>
                <div>
-                  <Image src={`/mapPin.svg`} width={40} height={40} alt="Map icon" />
+                  <Image src={mapPin} width={40} height={40} alt="Map icon" />
                </div>
                <div>
                   <p>location</p>
@@ -32,7 +36,7 @@ export default function Sidebar() {
             </li>
             <li>
                <div>
-                  <Image src={`/mapPin.svg`} width={40} height={40} alt="Map icon" />
+                  <Image src={mapPin} width={40} height={40} alt="Map icon" />
                </div>
                <div>
                   <p>location</p>
@@ -43,17 +47,17 @@ export default function Sidebar() {
          <ul>
             <li>
                <a href="https://github.com/Veresek">
-                  <Image src="/github.svg" alt="github icon" width={25} height={25} />
+                  <Image src={github} alt="github icon" width={25} height={25} />
                </a>
             </li>
             <li>
                <a href="https://www.linkedin.com/in/kacper-filipowski-b61968377/">
-                  <Image src="/linkedin.svg" alt="linkedin icon" width={25} height={25} />
+                  <Image src={linkedin} alt="linkedin icon" width={25} height={25} />
                </a>
             </li>
             <li>
                <a href="https://www.twitch.tv/veresek">
-                  <Image src="/twitch.svg" alt="twitch icon" width={25} height={25} />
+                  <Image src={twitch} alt="twitch icon" width={25} height={25} />
                </a>
             </li>
          </ul>
