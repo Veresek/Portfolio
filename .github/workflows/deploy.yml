@@ -22,5 +22,6 @@ jobs:
                   port: ${{ secrets.DEPLOY_PORT }}
                   script: |
                       cd Portfolio
+                      git pull origin main
                       docker compose up -d --build prod
                       exit
