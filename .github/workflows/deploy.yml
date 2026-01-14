@@ -23,5 +23,8 @@ jobs:
                   script: |
                       cd Portfolio
                       git pull origin main
-                      docker compose up -d --build prod
+                      npm install
+                      npm run build
+                      pm2 restart portfolio || pm2 start npm --name "portfolio" -- start
+                      pm2 save
                       exit

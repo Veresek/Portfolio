@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import mapPin from '@assets/mapPin.svg'
+import book from '@assets/book.svg'
+import briefcase from '@assets/briefcase.svg'
 import github from '@assets/socials/github.svg'
 import linkedin from '@assets/socials/linkedin.svg'
 import twitch from '@assets/socials/twitch.svg'
@@ -18,11 +20,20 @@ export default function Sidebar() {
          <ul>
             <li>
                <div>
-                  <Image src={mapPin} width={40} height={40} alt="Map icon" />
+                  <Image src={book} width={40} height={40} alt="Map icon" />
                </div>
                <div>
-                  <p>location</p>
-                  <p>Warsaw, Poland</p>
+                  <p>Expirience</p>
+                  <p>Student</p>
+               </div>
+            </li>
+            <li>
+               <div>
+                  <Image src={briefcase} width={40} height={40} alt="Map icon" />
+               </div>
+               <div>
+                  <p>Availability</p>
+                  <p>Open to collaboration</p>
                </div>
             </li>
             <li>
@@ -31,16 +42,7 @@ export default function Sidebar() {
                </div>
                <div>
                   <p>location</p>
-                  <p>Warsaw, Poland</p>
-               </div>
-            </li>
-            <li>
-               <div>
-                  <Image src={mapPin} width={40} height={40} alt="Map icon" />
-               </div>
-               <div>
-                  <p>location</p>
-                  <p>Warsaw, Poland</p>
+                  <p>Poland</p>
                </div>
             </li>
          </ul>
