@@ -7,7 +7,7 @@ import linkedin from '@assets/socials/linkedin.svg'
 import twitch from '@assets/socials/twitch.svg'
 export default function Sidebar() {
    return (
-      <aside className="sticky top-8 self-start w-full md:w-70 lg:w-[320px] bg-[#1e1e1f] rounded-2xl p-4 md:p-6">
+      <aside className="sticky top-8 self-start w-full md:w-70 lg:w-[320px] bg-[#1e1e1f] rounded-2xl p-4 md:p-6 shadow-2xl border border-slate-700">
          <div className="flex justify-center content-center">
             <figure className="relative block">
                <Image

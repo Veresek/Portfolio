@@ -15,10 +15,10 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en">
-         <body className={`antialiased pb-16 md:pb-0`}>
-            <div className="flex gap-8 p-8 justify-center w-full">
+         <body className={`antialiased`}>
+            <div className="flex flex-col md:flex-row gap-8 p-4 md:p-8 justify-center w-full">
                <Sidebar />
-               <div className="flex-1 max-w-4xl bg-[#1e1e1f] border border-slate-500 relative rounded-2xl overflow-hidden">
+               <div className="flex-1 max-w-4xl bg-[#1e1e1f] relative rounded-2xl shadow-2xl border border-slate-700">
                   <Nav />
                   <div className="p-6">{children}</div>
                </div>
