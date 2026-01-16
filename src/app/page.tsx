@@ -10,7 +10,6 @@ import docker from '@assets/skills/docker.svg'
 import git from '@assets/skills/git.svg'
 import linux from '@assets/skills/linux.svg'
 import tailwind from '@assets/skills/tailwindcss.svg'
-import 'swiper/css'
 
 function Card({
    img,
