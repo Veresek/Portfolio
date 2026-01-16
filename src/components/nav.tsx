@@ -1,40 +1,38 @@
 'use client'
-import Image from 'next/image'
 import Link from 'next/link'
-import menu from '@assets/menu.svg'
-import { useState } from 'react'
+import { usePathname } from 'next/navigation'
+
 export default function Nav() {
-   const [openNav, setOpenNav] = useState<boolean>(false)
+   const pathname = usePathname()
+
+   const links = [
+      { href: '/', label: 'About Me' },
+      { href: '/projects', label: 'Projects' },
+      { href: '/experience', label: 'Experience' },
+      { href: '/contact', label: 'Contact' },
+   ]
+
    return (
-      <nav>
-         <Image
-            src={menu}
-            width={40}
-            height={40}
-            alt="menu icon"
-            className=""
-            onClick={() => {
-               setOpenNav(!openNav)
-            }}
-         />
-         {openNav && (
-            <div>
-               <ul>
-                  <li>
-                     <Link href="/">About Me</Link>
+      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-[#1a1a1a] border-t border-slate-600 md:border-none md:bg-transparent md:absolute md:top-4 md:right-4 md:left-auto md:bottom-auto">
+         <div className="p-3 md:p-0">
+            <ul className="flex flex-row justify-around md:justify-end md:gap-1">
+               {links.map((link) => (
+                  <li key={link.href}>
+                     <Link
+                        href={link.href}
+                        className={`text-sm md:text-base px-3 py-2 rounded-lg transition-all duration-200
+                           ${
+                              pathname === link.href
+                                 ? 'text-white bg-slate-600/50 font-medium'
+                                 : 'text-gray-400 hover:text-white hover:bg-slate-700/30'
+                           }`}
+                     >
+                        {link.label}
+                     </Link>
                   </li>
-                  <li>
-                     <Link href="/projects">My Projects</Link>
-                  </li>
-                  <li>
-                     <Link href="/experience">My Experience</Link>
-                  </li>
-                  <li>
-                     <Link href="/contact">Contact</Link>
-                  </li>
-               </ul>
-            </div>
-         )}
+               ))}
+            </ul>
+         </div>
       </nav>
    )
 }

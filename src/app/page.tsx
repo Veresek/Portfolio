@@ -23,46 +23,68 @@ function Card({
    alt: string
 }) {
    return (
-      <div>
-         <Image src={img} width={40} height={40} alt={alt} />
-         <h3>{title}</h3>
-         <p>{description}</p>
+      <div className="flex gap-4 p-4 bg-[#2a2a2a] border border-slate-600/50 rounded-xl hover:border-slate-500 transition-colors">
+         <div className="shrink-0 w-12 h-12 bg-[#1e1e1f] rounded-lg flex items-center justify-center">
+            <Image src={img} width={24} height={24} alt={alt} />
+         </div>
+         <div>
+            <h3 className="text-white font-medium mb-1">{title}</h3>
+            <p className="text-gray-400 text-sm">{description}</p>
+         </div>
       </div>
    )
 }
 function Skill({ img, alt, href }: { img: string; alt: string; href: string }) {
    return (
-      <Link className="p-5 bg-[#222] block rounded-2xl" href={href}>
-         <Image src={img} alt={alt} width={100} height={100} />
+      <Link
+         className="p-5 bg-[#222] block rounded-2xl hover:bg-[#2a2a2a] hover:scale-110 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:shadow-slate-900/50"
+         href={href}
+      >
+         <Image
+            src={img}
+            alt={alt}
+            width={80}
+            height={80}
+            className="transition-transform duration-300"
+         />
       </Link>
    )
 }
 
 export default function Home() {
    return (
-      <div>
-         <h1>About Me</h1>
-         <div></div>
-         <p>
+      <div className="space-y-8">
+         <h1 className="text-3xl font-bold text-white inline-block">
+            About Me
+            <span className="block w-12 h-1 bg-slate-500 mt-2 rounded-full"></span>
+         </h1>
+         <p className="text-gray-300 leading-relaxed">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur explicabo
             consectetur, eius repudiandae eum ut quod magni at perferendis dolores similique!
             Quaerat, similique saepe quod totam autem doloremque assumenda culpa.
          </p>
-         <div>
-            <h2>What I&apos;m Doing</h2>
-            <Card
-               img={frontend}
-               title="Frontend Development"
-               description="essa"
-               alt="frontend icon"
-            />
-            <Card img={backend} title="Backend Development" description="essa" alt="backend icon" />
-            <Card img={uiux} title="UI/UX Design" description="essa" alt="UI/UX icon" />
-            <Card img={devops} title="DevOps" description="essa" alt="DevOps" />
-         </div>
-         <div>
-            <h2>Skills</h2>
-            <div className="flex gap-4">
+         <section>
+            <h2 className="text-2xl font-semibold text-white mb-4">What I&apos;m Doing</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+               <Card
+                  img={frontend}
+                  title="Frontend Development"
+                  description="essa"
+                  alt="frontend icon"
+               />
+               <Card
+                  img={backend}
+                  title="Backend Development"
+                  description="essa"
+                  alt="backend icon"
+               />
+               <Card img={uiux} title="UI/UX Design" description="essa" alt="UI/UX icon" />
+               <Card img={devops} title="DevOps" description="essa" alt="DevOps" />
+            </div>
+         </section>
+         <section>
+            <h2 className="text-2xl font-semibold text-white mb-4">Skills</h2>
+            <div className="flex flex-wrap gap-4 justify-evenly">
                <Skill img={react} alt="react logo" href="https://react.dev/" />
                <Skill img={tailwind} alt="tailwind logo" href="https://tailwindcss.com/" />
                <Skill img={python} alt="python logo" href="https://www.python.org/" />
@@ -70,7 +92,7 @@ export default function Home() {
                <Skill img={git} alt="git logo" href="https://git-scm.com/" />
                <Skill img={linux} alt="linux logo" href="https://www.linux.org/" />
             </div>
-         </div>
+         </section>
       </div>
    )
 }
