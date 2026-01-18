@@ -87,7 +87,7 @@ li {
 	margin-bottom: 15px;
 	font-size: 0.95em;
 }
-.exp li {
+ul li {
 	flex-direction: column;
 }
 
@@ -101,6 +101,9 @@ li {
 
 .item-content {
 	flex: 1;
+	p {
+		margin-top: 0;
+	}
 }
 
 .employer-review {
@@ -110,7 +113,7 @@ li {
 	font-style: italic;
 	color: #555;
 	font-size: 0.9em;
-	line-height: 1.4;
+	line-height: 1;
 }
 
 footer {
