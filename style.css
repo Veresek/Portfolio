@@ -1,10 +1,9 @@
-/* Minimalist technical style */
-
+/* Minimalist technical style - Cleaned */
 body {
-	font-family: 'Arial', 'Helvetica', sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.6;
 	color: #222;
-	background-color: #fff;
+	background: #fff;
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -28,7 +27,7 @@ header {
 }
 
 .header-text h1 {
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 
 .profile-pic {
@@ -86,8 +85,6 @@ li {
 	align-items: flex-start;
 	margin-bottom: 15px;
 	font-size: 0.95em;
-}
-ul li {
 	flex-direction: column;
 }
 
@@ -101,9 +98,9 @@ ul li {
 
 .item-content {
 	flex: 1;
-	p {
-		margin-top: 0;
-	}
+}
+.item-content p {
+	margin-top: 0;
 }
 
 .employer-review {
@@ -129,11 +126,9 @@ footer {
 		flex-direction: column;
 		align-items: flex-start;
 	}
-
 	li {
 		flex-direction: column;
 	}
-
 	.date {
 		margin-bottom: 4px;
 		flex: none;
