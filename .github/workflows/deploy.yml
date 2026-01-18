@@ -1,13 +1,11 @@
 name: Deployment
 on:
-    workflow_run:
-        workflows: ["CI"]
-        types:
-            - completed
+    push:
+        branches:
+            - main
 
 jobs:
     deploy:
-        if: ${{ github.event.workflow_run.conclusion == 'success' }}
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
@@ -23,9 +21,6 @@ jobs:
                   script: |
                       cd Portfolio
                       git pull origin main
-                      npm ci --omit=dev
-                      rm -rf .next
-                      npm run build
-                      pm2 reload portfolio || pm2 start npm --name "portfolio" -- start
+                      pm2 reload portfolio || PORT=3000 pm2 start npm --name "portfolio" -- start
                       pm2 save
                       exit
